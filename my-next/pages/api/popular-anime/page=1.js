@@ -12,8 +12,8 @@ const getAnimebee = async (req, res) => {
   const properties = req.body.properties
 
   try {
-    const options = await getOptions()
-    const browser = await puppeteer.launch({headless:'option'})
+    
+    const browser = await puppeteer.launch()
     const page = await browser.newPage()
     await page.setRequestInterception(true)
     page.on("request", (request) => {
