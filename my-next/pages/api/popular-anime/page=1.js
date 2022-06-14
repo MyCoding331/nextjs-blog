@@ -1,6 +1,6 @@
 const puppeteer = require("puppeteer")
 const cheerio = require("cheerio")
-const chrome = require("chrome-aws-lambda")
+
 const axios = require("axios")
 
 
