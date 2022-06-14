@@ -4,23 +4,7 @@ const chrome = require("chrome-aws-lambda")
 const axios = require("axios")
 
 
-const getOptions = async () => {
-  let options
-  if (process.env.NODE_ENV === "production") {
-    options = {
-      args: chrome.args,
-      executablePath: await chrome.executablePath,
-      headless: chrome.headless,
-    }
-  } else {
-    options = {
-      args: [],
 
-      headless: true,
-    }
-  }
-  return options
-}
 
 const getAnimebee = async (req, res) => {
    
